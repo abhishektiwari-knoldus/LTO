@@ -6,7 +6,7 @@ export default class App extends Component {
   render() {
     return(
       <div>
-        <SearchBar brand="MovieBox" searchText={''} />
+        <SearchBar brand="AbhiBox" searchText={''} />
         {this.props.children}
       </div>
     );
