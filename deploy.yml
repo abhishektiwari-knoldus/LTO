@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: lto-container
-        image: abhishek00007/lto:react
+        image: abhishek00007/lto:v.{BUILD_NUMBER}
         ports:
         - containerPort: 3000
 ---
