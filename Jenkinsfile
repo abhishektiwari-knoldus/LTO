@@ -29,7 +29,7 @@ pipeline {
                  sh 'docker push abhishek00007/lto:v.${BUILD_NUMBER}'
             }
         }
-        stage('deploy k8s')
+        stage('deploy k8ss')
         {
              when {
                 branch "master"
