@@ -9,7 +9,7 @@ pipeline {
             }
             
         }
-        stage('docker login.'){
+        stage('docker login'){
             steps{
                 script{
                     withCredentials([string(credentialsId: 'dochub-pwd', variable: 'dockerhubpwd')]) {
