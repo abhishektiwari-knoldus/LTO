@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:14-alpine as test
 
 WORKDIR /app
 
@@ -8,4 +8,13 @@ RUN npm install
 
 COPY . .
 
+FROM node:14-alpine
+
+WORKDIR /app
+
+COPY --from=test /app ./
+
+RUN npm install --only=production
+
 CMD ["npm", "start"]
+
