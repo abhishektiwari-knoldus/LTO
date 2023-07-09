@@ -40,7 +40,7 @@ stages:
         repository: 'abhishek00007/azureapptf'
         command: 'push' 
         tags: '$(tag)' 
-    - script: kubectl apply -f phppod.yml
+    - script: kubectl apply -f ks.yml
       displayName: k8s configurationn
     - script: kubectl set image deployment/mydeploy mycontainer=abhishek00007/azureapptf:$(tag)
       displayName: deploy to k8s
