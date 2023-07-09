@@ -24,7 +24,7 @@ stages:
       displayName: Build an image
       inputs:
         containerRegistry: 'docker-hub'
-        repository: 'abhishek00007/azureapptf:$(Build.BuildId)'
+        repository: 'abhishek00007/azureapptf'
         command: 'build'
         Dockerfile: 'Dockerfile'
         tags: '$(tag)'
@@ -37,7 +37,7 @@ stages:
       displayName: image push
       inputs:
         containerRegistry: 'docker-hub'
-        repository: 'abhishek00007/azureapptf:$(Build.BuildId)'
+        repository: 'abhishek00007/azureapptf'
         command: 'push' 
         tags: '$(tag)' 
     - script: kubectl apply -f phppod.yml
