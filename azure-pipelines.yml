@@ -30,7 +30,7 @@ stages:
         Dockerfile: 'Dockerfile'
         tags: '$(tag)'
     - task: Docker@2
-      displayName: docker login.
+      displayName: docker login
       inputs:
         containerRegistry: 'docker-hub'
         command: 'login'
